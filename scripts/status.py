@@ -8,17 +8,17 @@ def get_progress_bar(percent, length=10, colors=False):
     percent = max(0, min(100, percent))
     filled_count = math.ceil((percent / 100) * length)
     empty_count = length - filled_count
-    color = "#CCCCCC"
+    color = "#219ebc"
 
     # Color Logic
     if colors:
         if percent <= 20: color = "#FF5555"
         elif percent <= 40: color = "#FFAA55"
-        else: color = "#CCCCCC"
+        else: color = "#219ebc"
 
     # █ = Full Block, ░ = Light Shade
     filled_bar = f"<span foreground='{color}'>{'█' * filled_count}</span>"
-    empty_bar = f"<span foreground='#ffffff'>{'░' * empty_count}</span>"
+    empty_bar = f"<span foreground='#ffffff'>{'█' * empty_count}</span>"
    
     return f"{filled_bar}{empty_bar}"
 
@@ -84,7 +84,7 @@ def get_ram():
 if __name__ == "__main__":
     while True:
         # Construct the status line
-        status = f" bat {get_battery()} wifi {get_wifi()} ram {get_ram()}"
+        status = f"<span>bat {get_battery()} wifi {get_wifi()} ram {get_ram()}</span>"
         
         # Print to stdout with flush to ensure instant update
         print(status, flush=True)

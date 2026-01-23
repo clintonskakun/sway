@@ -137,9 +137,9 @@ bar {
     position top
 
     colors {
-        statusline #ffffff
-        background #000000CC
-        focused_workspace #000000 #219ebc #ffffff
-        inactive_workspace #000000 #000000 #cccccc
+        statusline #000000
+        background #00000000
+        focused_workspace #00000000 #00000000 #219ebc
+        inactive_workspace #00000000 #00000000 #000000
     }
 }
