@@ -20,7 +20,7 @@ exec uwsm app -- dunst &
 
 seat * xcursor_theme DMZ-White 24
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/clinton/wallpaper.jpg fill
+output * bg ~/wallpaper.jpg fill
 
 ### Idle configuration
 #
